@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -7,11 +7,10 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
   <section>
-    <h1>{{title}}</h1>
+    <h1>{{title()}}</h1>
     <router-outlet />
   </section>`,
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Welcome to challenges';
+  title = signal<string>('Welcome to challenges');
 }
