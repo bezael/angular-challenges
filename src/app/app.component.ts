@@ -5,9 +5,13 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
+  template: `
+  <section>
+    <h1>{{title}}</h1>
+    <router-outlet />
+  </section>`,
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'challenges';
+  title = 'Welcome to challenges';
 }
