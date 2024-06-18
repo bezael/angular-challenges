@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
   <section>
-    <h1>{{title()}}</h1>
+    <h1 class="text-3xl font-bold underline">{{title()}}</h1>
     <router-outlet />
   </section>`,
 })
